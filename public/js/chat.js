@@ -61,6 +61,7 @@ socket.on('locationMessage', (message) => {
 })
 
 socket.on('roomData', ({ room, users }) => {
+    console.log(room, users)
     let html = Mustache.render(sidebarTemplate, {
         room,
         users
